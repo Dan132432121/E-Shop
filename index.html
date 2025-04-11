@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-shop Kabelky - Původní vzhled</title>
+    <title>E-shop Kabelky - Původní vzhled (Bez loga)</title>
     <style>
         /* === Základní Reset a Nastavení === */
         * {
@@ -13,14 +13,14 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Podobnější font */
-            background-color: #f8f8f8; /* Světle šedé pozadí jako v předloze */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
             color: #333;
         }
 
         a {
             text-decoration: none;
-            color: inherit; /* Dědí barvu od rodiče */
+            color: inherit;
         }
 
         ul {
@@ -30,26 +30,30 @@
         img {
             max-width: 100%;
             height: auto;
-            display: block; /* Odstraní mezeru pod obrázkem */
+            display: block;
         }
 
-        .container { /* Pomocná třída pro centrování obsahu */
-            max-width: 1200px; /* Nebo jiná šířka podle potřeby */
-            margin: 0 auto; /* Vycentruje na stránce */
-            padding: 0 15px; /* Malý padding po stranách */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
         }
 
         /* === Hlavička (Header) === */
         .main-header {
-            background-color: #ffffff; /* Bílé pozadí hlavičky */
+            background-color: #ffffff;
             border-bottom: 1px solid #eee;
             padding: 15px 0;
+            min-height: 70px; /* Přidána minimální výška kvůli prázdnému logu */
+            display: flex; /* Aby se obsah centroval i vertikálně */
+            align-items: center; /* Vertikální centrování */
         }
 
         .header-content {
             display: flex;
-            justify-content: space-between; /* Rozmístí prvky od sebe */
+            justify-content: space-between;
             align-items: center;
+            width: 100%; /* Aby header-content zabral celou šířku containeru */
         }
 
         .search-area a, .saved-items a {
@@ -63,11 +67,13 @@
         .logo {
             font-size: 2.5em;
             font-weight: bold;
-            font-family: serif; /* Napodobení OZETA fontu */
-            letter-spacing: 2px; /* Mezery mezi písmeny */
+            font-family: serif;
+            letter-spacing: 2px;
             text-align: center;
-            flex-grow: 1; /* Logo zabere dostupný prostor mezi hledáním a uloženými */
-            color: #000; /* Černé logo */
+            flex-grow: 1;
+            color: #000;
+            /* Text "OZETA" byl odstraněn z HTML */
+            /* Můžeš sem později vložit <img src="tvoje-logo.png" alt="Logo"> */
         }
 
         /* === Hlavní Menu (Navigace) === */
@@ -79,29 +85,29 @@
 
         .main-nav ul {
             display: flex;
-            justify-content: center; /* Vycentruje položky menu */
-            gap: 25px; /* Mezery mezi položkami */
+            justify-content: center;
+            gap: 25px;
         }
 
         .main-nav li a {
-            text-transform: uppercase; /* Velká písmena */
+            text-transform: uppercase;
             font-size: 0.9em;
             font-weight: 600;
             color: #444;
             padding: 5px 0;
         }
-         .main-nav li a:hover, .main-nav li a.active { /* Zvýraznění aktivní položky */
+         .main-nav li a:hover, .main-nav li a.active {
              color: #000;
              border-bottom: 2px solid #000;
          }
 
         /* === Nadpis Kategorie === */
         .category-title-bar {
-            background-color: #5a5a5a; /* Tmavě šedá jako v předloze */
+            background-color: #5a5a5a;
             color: #ffffff;
             padding: 20px;
-            margin: 30px 0; /* Odsazení nad a pod */
-            border: 1px solid #444; /* Rámeček jako v předloze */
+            margin: 30px 0;
+            border: 1px solid #444;
         }
 
         .category-title-bar h1 {
@@ -110,21 +116,21 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             text-align: center;
-             border: 1px solid #888; /* Vnitřní rámeček */
-             padding: 10px;
+            border: 1px solid #888;
+            padding: 10px;
         }
 
         /* === Filtry a Řazení === */
         .filter-section {
-            padding: 0 15px 20px 15px; /* Padding pro filtry */
+            padding: 0 15px 20px 15px;
             max-width: 1200px;
             margin: 0 auto 20px auto;
         }
 
         .filter-controls {
             display: flex;
-            flex-wrap: wrap; /* Zalamování na menších obrazovkách */
-            gap: 10px; /* Mezery mezi filtry */
+            flex-wrap: wrap;
+            gap: 10px;
             margin-bottom: 15px;
         }
 
@@ -142,7 +148,7 @@
          .filter-btn:hover {
              background-color: #e5e5e5;
          }
-         .filter-btn span { /* Šipka dolů */
+         .filter-btn span {
              font-size: 0.7em;
          }
 
@@ -162,7 +168,7 @@
             align-items: center;
             gap: 5px;
         }
-        .filter-tag span { /* Křížek pro zrušení */
+        .filter-tag span {
             cursor: pointer;
             font-weight: bold;
         }
@@ -178,13 +184,13 @@
 
          .sorting {
              display: flex;
-             justify-content: flex-end; /* Řazení vpravo */
+             justify-content: flex-end;
          }
          .sort-btn {
             background-color: #f0f0f0;
             border: 1px solid #ddd;
             padding: 8px 15px;
-            font-size: 0.8em; /* Upraveno z 0.9em */
+            font-size: 0.8em;
             cursor: pointer;
             color: #555;
             text-transform: uppercase;
@@ -192,7 +198,7 @@
             align-items: center;
             gap: 5px;
          }
-         .sort-btn span { /* Šipka dolů */
+         .sort-btn span {
              font-size: 0.7em;
          }
          .sort-btn:hover {
@@ -202,35 +208,34 @@
         /* === Výpis Produktů === */
         .product-grid {
             display: grid;
-            /* Vytvoří 4 sloupce na desktopu, automaticky se přizpůsobí méně sloupců na menších obrazovkách */
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px; /* Mezery mezi produkty */
-            padding: 0 15px; /* Shodný padding jako u kontejneru */
+            gap: 20px;
+            padding: 0 15px;
             max-width: 1200px;
-            margin: 0 auto; /* Centrování gridu */
+            margin: 0 auto;
         }
 
         .product-card {
             background-color: #ffffff;
             border: 1px solid #eee;
             text-align: center;
-            padding-bottom: 15px; /* Místo pro název a cenu */
-            position: relative; /* Pro absolutní pozicování štítku */
+            padding-bottom: 15px;
+            position: relative;
         }
          .product-card:hover {
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Lehký stín při najetí */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
          }
 
         .product-image-placeholder {
             width: 100%;
-            height: 250px; /* Výška placeholderu - uprav podle potřeby */
-            background-color: #e0e0e0; /* Šedá barva placeholderu */
+            height: 250px;
+            background-color: #e0e0e0;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #aaa;
             font-size: 0.9em;
-            margin-bottom: 10px; /* Mezera pod obrázkem */
+            margin-bottom: 10px;
         }
 
         .product-card h3 {
@@ -249,7 +254,7 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            background-color: #333; /* Tmavý badge */
+            background-color: #333;
             color: #fff;
             font-size: 0.7em;
             padding: 4px 8px;
@@ -257,26 +262,26 @@
             text-transform: uppercase;
         }
 
-         .favorite-icon { /* Ikona hvězdičky - jen placeholder */
+         .favorite-icon {
              position: absolute;
              top: 10px;
              left: 10px;
-             color: #ccc; /* Šedá hvězdička */
+             color: #ccc;
              font-size: 1.2em;
              cursor: pointer;
          }
           .favorite-icon:hover {
-              color: #f0c040; /* Zlatá při najetí */
+              color: #f0c040;
           }
 
           /* === Patička (volitelné) === */
         footer {
-           background-color: #f1f1f1; /* Světle šedé pozadí patičky */
-           color: #555; /* Tmavě šedý text */
+           background-color: #f1f1f1;
+           color: #555;
            text-align: center;
            padding: 20px 0;
-           margin-top: 40px; /* Odsazení od produktů */
-           border-top: 1px solid #ddd; /* Šedý horní rámeček */
+           margin-top: 40px;
+           border-top: 1px solid #ddd;
         }
         footer p {
            margin: 0;
@@ -290,13 +295,14 @@
     <header class="main-header">
         <div class="container header-content">
             <div class="search-area">
-                <a href="#">🔍 Vyhledat</a> <!-- Použij ikonu místo textu -->
+                <a href="#">🔍 Vyhledat</a>
             </div>
+            <!-- Text loga byl odstraněn z tohoto DIVu -->
             <div class="logo">
-                OZETA <!-- Sem můžeš dát <img> s logem -->
+
             </div>
             <div class="saved-items">
-                <a href="#">⭐ Uložené</a> <!-- Použij ikonu místo textu -->
+                <a href="#">⭐ Uložené</a>
             </div>
         </div>
     </header>
@@ -307,7 +313,7 @@
             <ul>
                 <li><a href="#">Nová kolekce</a></li>
                 <li><a href="#">Muži</a></li>
-                <li><a href="#" class="active">Ženy</a></li> <!-- Příklad aktivní položky -->
+                <li><a href="#" class="active">Ženy</a></li>
                 <li><a href="#">Slevy</a></li>
                 <li><a href="#">Příležitosti</a></li>
                 <li><a href="#">Objevuj</a></li>
@@ -320,6 +326,7 @@
     <!-- === Nadpis Kategorie === -->
     <div class="category-title-bar">
         <div class="container">
+             <!-- Text nadpisu zůstal -->
              <h1>Dámské kabelky</h1>
         </div>
     </div>
@@ -351,11 +358,9 @@
     <main class="product-grid container">
         <!-- Příklad produktu 1 -->
         <article class="product-card">
-            <span class="favorite-icon">☆</span> <!-- Hvězdička pro oblíbené -->
+            <span class="favorite-icon">☆</span>
             <div class="premium-badge">Premium Collection</div>
-            <!-- Sem přijde skutečný obrázek -->
             <div class="product-image-placeholder">(Obrázek produktu 1)</div>
-             <!-- <img src="cesta/k/obrazku1.jpg" alt="Název produktu 1"> -->
             <h3>Elegantní kožená kabelka</h3>
             <p class="price">2 499 Kč</p>
         </article>
@@ -387,12 +392,9 @@
              <p class="price">1 299 Kč</p>
         </article>
 
-        <!-- Přidej další product-card elementy podle potřeby -->
-
     </main>
 
     <!-- Patičku (footer) můžeš přidat sem, pokud ji potřebuješ -->
-    <!-- Musíš odkomentovat tuto část, abys ji viděl -->
     <!--
     <footer>
         <div class="container">
