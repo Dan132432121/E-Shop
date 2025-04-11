@@ -67,6 +67,7 @@
             letter-spacing: 2px; /* Mezery mezi písmeny */
             text-align: center;
             flex-grow: 1; /* Logo zabere dostupný prostor mezi hledáním a uloženými */
+            color: #000; /* Černé logo */
         }
 
         /* === Hlavní Menu (Navigace) === */
@@ -237,6 +238,7 @@
             font-size: 1em;
             font-weight: normal;
             margin-bottom: 5px;
+            color: #333;
         }
 
         .product-card .price {
@@ -248,7 +250,7 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            background-color: #333;
+            background-color: #333; /* Tmavý badge */
             color: #fff;
             font-size: 0.7em;
             padding: 4px 8px;
@@ -260,7 +262,7 @@
              position: absolute;
              top: 10px;
              left: 10px;
-             color: #ccc;
+             color: #ccc; /* Šedá hvězdička */
              font-size: 1.2em;
              cursor: pointer;
          }
@@ -268,6 +270,18 @@
               color: #f0c040; /* Zlatá při najetí */
           }
 
+          /* === Patička (volitelné) === */
+        footer {
+           background-color: #f1f1f1; /* Světle šedé pozadí patičky */
+           color: #555; /* Tmavě šedý text */
+           text-align: center;
+           padding: 20px 0;
+           margin-top: 40px; /* Odsazení od produktů */
+           border-top: 1px solid #ddd; /* Šedý horní rámeček */
+        }
+        footer p {
+           margin: 0;
+        }
 
     </style>
 </head>
@@ -379,6 +393,7 @@
     </main>
 
     <!-- Patičku (footer) můžeš přidat sem, pokud ji potřebuješ -->
+    <!-- Musíš odkomentovat tuto část, abys ji viděl -->
     <!--
     <footer>
         <div class="container">
