@@ -1,281 +1,411 @@
- /* === Základní Reset a Nastavení === */
- * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
- }
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-shop Kabelky - Fialová/Růžová</title>
 
- body {
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-     background-color: #ffffff; /* Bílé pozadí stránky */
-     color: #333; /* Tmavě šedý text pro čitelnost */
- }
+    <style>
+        /* === Základní Reset a Nastavení === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
- a {
-     text-decoration: none;
-     color: inherit;
- }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff; /* Bílé pozadí stránky */
+            color: #333; /* Tmavě šedý text pro čitelnost */
+        }
 
- ul {
-     list-style: none;
- }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
- img {
-     max-width: 100%;
-     height: auto;
-     display: block;
- }
+        ul {
+            list-style: none;
+        }
 
- .container {
-     max-width: 1200px;
-     margin: 0 auto;
-     padding: 0 15px;
- }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
 
- /* === Hlavička (Header) === */
- .main-header {
-     background-color: #ffffff; /* Bílé pozadí hlavičky */
-     border-bottom: 1px solid #eee;
-     padding: 15px 0;
- }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
 
- .header-content {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
- }
+        /* === Hlavička (Header) === */
+        .main-header {
+            background-color: #ffffff; /* Bílé pozadí hlavičky */
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
 
- .search-area a, .saved-items a {
-     color: #9370DB; /* Fialová pro ikony/odkazy */
-     padding: 5px;
- }
-  .search-area a:hover, .saved-items a:hover {
-     color: #DB7093; /* Růžová při najetí */
-  }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
- .logo {
-     font-size: 2.5em;
-     font-weight: bold;
-     font-family: serif;
-     letter-spacing: 2px;
-     text-align: center;
-     flex-grow: 1;
-     color: #9370DB; /* Fialové logo */
- }
+        .search-area a, .saved-items a {
+            color: #9370DB; /* Fialová pro ikony/odkazy */
+            padding: 5px;
+        }
+        .search-area a:hover, .saved-items a:hover {
+            color: #DB7093; /* Růžová při najetí */
+        }
 
- /* === Hlavní Menu (Navigace) === */
- .main-nav {
-     background-color: #ffffff; /* Bílé pozadí menu */
-     border-bottom: 1px solid #eee;
-     padding: 10px 0;
- }
+        .logo {
+            font-size: 2.5em;
+            font-weight: bold;
+            font-family: serif;
+            letter-spacing: 2px;
+            text-align: center;
+            flex-grow: 1;
+            color: #9370DB; /* Fialové logo */
+        }
 
- .main-nav ul {
-     display: flex;
-     justify-content: center;
-     gap: 25px;
- }
+        /* === Hlavní Menu (Navigace) === */
+        .main-nav {
+            background-color: #ffffff; /* Bílé pozadí menu */
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+        }
 
- .main-nav li a {
-     text-transform: uppercase;
-     font-size: 0.9em;
-     font-weight: 600;
-     color: #9370DB; /* Fialové položky menu */
-     padding: 5px 0;
- }
-  .main-nav li a:hover, .main-nav li a.active {
-      color: #DB7093; /* Růžová pro aktivní/hover */
-      border-bottom: 2px solid #DB7093; /* Růžové podtržení */
-  }
+        .main-nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
 
- /* === Nadpis Kategorie === */
- .category-title-bar {
-     background-color: #9370DB; /* Fialový pruh */
-     color: #ffffff; /* Bílý text */
-     padding: 20px;
-     margin: 30px 0;
-     border: 1px solid #7A5FB0; /* Tmavší fialový vnější rámeček */
- }
+        .main-nav li a {
+            text-transform: uppercase;
+            font-size: 0.9em;
+            font-weight: 600;
+            color: #9370DB; /* Fialové položky menu */
+            padding: 5px 0;
+        }
+        .main-nav li a:hover, .main-nav li a.active {
+            color: #DB7093; /* Růžová pro aktivní/hover */
+            border-bottom: 2px solid #DB7093; /* Růžové podtržení */
+        }
 
- .category-title-bar h1 {
-     font-size: 1.8em;
-     font-weight: normal;
-     text-transform: uppercase;
-     letter-spacing: 1px;
-     text-align: center;
-      border: 1px solid #BDA0E8; /* Světlejší fialový vnitřní rámeček */
-      padding: 10px;
- }
+        /* === Nadpis Kategorie === */
+        .category-title-bar {
+            background-color: #9370DB; /* Fialový pruh */
+            color: #ffffff; /* Bílý text */
+            padding: 20px;
+            margin: 30px 0;
+            border: 1px solid #7A5FB0; /* Tmavší fialový vnější rámeček */
+        }
 
- /* === Filtry a Řazení === */
- .filter-section {
-     padding: 0 15px 20px 15px;
-     max-width: 1200px;
-     margin: 0 auto 20px auto;
- }
+        .category-title-bar h1 {
+            font-size: 1.8em;
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            border: 1px solid #BDA0E8; /* Světlejší fialový vnitřní rámeček */
+            padding: 10px;
+        }
 
- .filter-controls {
-     display: flex;
-     flex-wrap: wrap;
-     gap: 10px;
-     margin-bottom: 15px;
- }
+        /* === Filtry a Řazení === */
+        .filter-section {
+            padding: 0 15px 20px 15px;
+            max-width: 1200px;
+            margin: 0 auto 20px auto;
+        }
 
- .filter-btn {
-     background-color: #ffffff; /* Bílé pozadí tlačítka */
-     border: 1px solid #E6E6FA; /* Levandulový (velmi světle fialový) rámeček */
-     padding: 8px 15px;
-     font-size: 0.9em;
-     cursor: pointer;
-     display: flex;
-     align-items: center;
-     gap: 5px;
-     color: #9370DB; /* Fialový text */
- }
-  .filter-btn:hover {
-      background-color: #FAF7FF; /* Velmi lehký fialový nádech pozadí */
-      border-color: #9370DB; /* Fialový rámeček při najetí */
-  }
-  .filter-btn span {
-      font-size: 0.7em;
-  }
+        .filter-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
 
- .active-filters {
-     display: flex;
-     align-items: center;
-     gap: 10px;
-     font-size: 0.9em;
-     margin-bottom: 20px;
- }
- .filter-tag {
-     background-color: #9370DB; /* Fialový tag */
-     color: #fff; /* Bílý text */
-     padding: 5px 10px;
-     display: flex;
-     align-items: center;
-     gap: 5px;
-     border-radius: 3px; /* Lehce zaoblené rohy */
- }
- .filter-tag span {
-     cursor: pointer;
-     font-weight: bold;
- }
- .clear-filters {
-      color: #9370DB; /* Fialový text */
-      cursor: pointer;
-      text-transform: uppercase;
-      font-size: 0.8em;
- }
-  .clear-filters:hover {
-      color: #DB7093; /* Růžový hover */
-  }
+        .filter-btn {
+            background-color: #ffffff; /* Bílé pozadí tlačítka */
+            border: 1px solid #E6E6FA; /* Levandulový (velmi světle fialový) rámeček */
+            padding: 8px 15px;
+            font-size: 0.9em;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #9370DB; /* Fialový text */
+        }
+        .filter-btn:hover {
+            background-color: #FAF7FF; /* Velmi lehký fialový nádech pozadí */
+            border-color: #9370DB; /* Fialový rámeček při najetí */
+        }
+        .filter-btn span {
+            font-size: 0.7em;
+        }
 
-  .sorting {
-      display: flex;
-      justify-content: flex-end;
-  }
-  .sort-btn {
-     background-color: #ffffff; /* Bílé pozadí */
-     border: 1px solid #E6E6FA; /* Levandulový rámeček */
-     padding: 8px 15px;
-     font-size: 0.8em; /* Menší písmo */
-     cursor: pointer;
-     color: #9370DB; /* Fialový text */
-     text-transform: uppercase;
-     display: flex;
-     align-items: center;
-     gap: 5px;
-  }
-  .sort-btn span {
-      font-size: 0.7em;
-  }
-  .sort-btn:hover {
-      background-color: #FAF7FF;
-      border-color: #9370DB;
-  }
+        .active-filters {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+        .filter-tag {
+            background-color: #9370DB; /* Fialový tag */
+            color: #fff; /* Bílý text */
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            border-radius: 3px; /* Lehce zaoblené rohy */
+        }
+        .filter-tag span {
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .clear-filters {
+            color: #9370DB; /* Fialový text */
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 0.8em;
+        }
+        .clear-filters:hover {
+            color: #DB7093; /* Růžový hover */
+        }
 
- /* === Výpis Produktů === */
- .product-grid {
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-     gap: 20px;
-     padding: 0 15px;
-     max-width: 1200px;
-     margin: 0 auto;
- }
+        .sorting {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .sort-btn {
+            background-color: #ffffff; /* Bílé pozadí */
+            border: 1px solid #E6E6FA; /* Levandulový rámeček */
+            padding: 8px 15px;
+            font-size: 0.8em; /* Menší písmo */
+            cursor: pointer;
+            color: #9370DB; /* Fialový text */
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .sort-btn span {
+            font-size: 0.7em;
+        }
+        .sort-btn:hover {
+            background-color: #FAF7FF;
+            border-color: #9370DB;
+        }
 
- .product-card {
-     background-color: #ffffff; /* Bílé pozadí karty */
-     border: 1px solid #eee; /* Jemný šedý rámeček */
-     text-align: center;
-     padding-bottom: 15px;
-     position: relative;
-     transition: box-shadow 0.3s ease; /* Plynulý přechod pro stín */
- }
-  .product-card:hover {
-     box-shadow: 0 6px 12px rgba(147, 112, 219, 0.2); /* Jemný fialový stín při najetí */
-  }
+        /* === Výpis Produktů === */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 0 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
- .product-image-placeholder {
-     width: 100%;
-     height: 250px;
-     background-color: #f0f0f0; /* Světle šedý placeholder */
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     color: #aaa;
-     font-size: 0.9em;
-     margin-bottom: 10px;
- }
+        .product-card {
+            background-color: #ffffff; /* Bílé pozadí karty */
+            border: 1px solid #eee; /* Jemný šedý rámeček */
+            text-align: center;
+            padding-bottom: 15px;
+            position: relative;
+            transition: box-shadow 0.3s ease; /* Plynulý přechod pro stín */
+        }
+        .product-card:hover {
+            box-shadow: 0 6px 12px rgba(147, 112, 219, 0.2); /* Jemný fialový stín při najetí */
+        }
 
- .product-card h3 {
-     font-size: 1em;
-     font-weight: normal;
-     margin-bottom: 5px;
-     color: #333; /* Tmavý text pro název */
- }
+        .product-image-placeholder {
+            width: 100%;
+            height: 250px;
+            background-color: #f0f0f0; /* Světle šedý placeholder */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
 
- .product-card .price {
-     font-weight: bold;
-     color: #333; /* Tmavý text pro cenu */
-     /* Pokud bys chtěl cenu barevně: color: #DB7093; */
- }
+        .product-card h3 {
+            font-size: 1em;
+            font-weight: normal;
+            margin-bottom: 5px;
+            color: #333; /* Tmavý text pro název */
+        }
 
- .premium-badge {
-     position: absolute;
-     top: 10px;
-     right: 10px;
-     background-color: #DB7093; /* Růžový badge */
-     color: #fff;
-     font-size: 0.7em;
-     padding: 4px 8px;
-     font-weight: bold;
-     text-transform: uppercase;
-     border-radius: 3px; /* Lehce zaoblené rohy */
- }
+        .product-card .price {
+            font-weight: bold;
+            color: #333; /* Tmavý text pro cenu */
+            /* Pokud bys chtěl cenu barevně: color: #DB7093; */
+        }
 
-  .favorite-icon {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      color: #ccc; /* Světle šedá hvězdička */
-      font-size: 1.3em; /* Trochu větší */
-      cursor: pointer;
-      transition: color 0.2s ease; /* Plynulá změna barvy */
-  }
-   .favorite-icon:hover {
-       color: #DB7093; /* Růžová při najetí */
-   }
+        .premium-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #DB7093; /* Růžový badge */
+            color: #fff;
+            font-size: 0.7em;
+            padding: 4px 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 3px; /* Lehce zaoblené rohy */
+        }
 
- /* === Patička (volitelné) === */
- footer {
-    background-color: #f8f0ff; /* Velmi světle fialové pozadí patičky */
-    color: #9370DB; /* Fialový text */
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px; /* Odsazení od produktů */
-    border-top: 1px solid #E6E6FA; /* Levandulový horní rámeček */
- }
- footer p {
-    margin: 0;
- }
+        .favorite-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #ccc; /* Světle šedá hvězdička */
+            font-size: 1.3em; /* Trochu větší */
+            cursor: pointer;
+            transition: color 0.2s ease; /* Plynulá změna barvy */
+        }
+        .favorite-icon:hover {
+            color: #DB7093; /* Růžová při najetí */
+        }
+
+        /* === Patička (volitelné) === */
+        footer {
+           background-color: #f8f0ff; /* Velmi světle fialové pozadí patičky */
+           color: #9370DB; /* Fialový text */
+           text-align: center;
+           padding: 20px 0;
+           margin-top: 40px; /* Odsazení od produktů */
+           border-top: 1px solid #E6E6FA; /* Levandulový horní rámeček */
+        }
+        footer p {
+           margin: 0;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- === Hlavička === -->
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="search-area">
+                <a href="#">🔍 Vyhledat</a> <!-- Použij ikonu místo textu -->
+            </div>
+            <div class="logo">
+                OZETA <!-- Sem můžeš dát <img> s logem -->
+            </div>
+            <div class="saved-items">
+                <a href="#">⭐ Uložené</a> <!-- Použij ikonu místo textu -->
+            </div>
+        </div>
+    </header>
+
+    <!-- === Hlavní Menu === -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#">Nová kolekce</a></li>
+                <li><a href="#">Muži</a></li>
+                <li><a href="#" class="active">Ženy</a></li> <!-- Příklad aktivní položky -->
+                <li><a href="#">Slevy</a></li>
+                <li><a href="#">Příležitosti</a></li>
+                <li><a href="#">Objevuj</a></li>
+                <li><a href="#">Prodejny</a></li>
+                <li><a href="#">E-shop</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- === Nadpis Kategorie === -->
+    <div class="category-title-bar">
+        <div class="container">
+             <h1>Dámské kabelky</h1>
+        </div>
+    </div>
+
+
+    <!-- === Filtry a Řazení === -->
+    <section class="filter-section">
+        <div class="filter-controls">
+            <button class="filter-btn">Cena <span>▼</span></button>
+            <button class="filter-btn">Kategorie <span>▼</span></button>
+            <button class="filter-btn">Extra <span>▼</span></button>
+            <button class="filter-btn">Materiál <span>▼</span></button>
+            <button class="filter-btn">Země původu <span>▼</span></button>
+            <button class="filter-btn">Barva <span>▼</span></button>
+            <button class="filter-btn">Dostupné na prodejně <span>▼</span></button>
+        </div>
+         <div class="active-filters">
+             <div class="filter-tag">Kabelky <span>×</span></div>
+             <a href="#" class="clear-filters">Zrušit výběr</a>
+         </div>
+         <div class="sorting">
+             <button class="sort-btn">Seřadit od <span>▼</span></button>
+         </div>
+
+    </section>
+
+
+    <!-- === Výpis Produktů === -->
+    <main class="product-grid container">
+        <!-- Příklad produktu 1 -->
+        <article class="product-card">
+            <span class="favorite-icon">☆</span> <!-- Hvězdička pro oblíbené -->
+            <div class="premium-badge">Premium Collection</div>
+            <!-- Sem přijde skutečný obrázek -->
+            <div class="product-image-placeholder">(Obrázek produktu 1)</div>
+             <!-- <img src="cesta/k/obrazku1.jpg" alt="Název produktu 1"> -->
+            <h3>Elegantní kožená kabelka</h3>
+            <p class="price">2 499 Kč</p>
+        </article>
+
+        <!-- Příklad produktu 2 -->
+        <article class="product-card">
+             <span class="favorite-icon">☆</span>
+             <div class="premium-badge">Premium Collection</div>
+             <div class="product-image-placeholder">(Obrázek produktu 2)</div>
+             <h3>Malá crossbody kabelka</h3>
+             <p class="price">1 790 Kč</p>
+        </article>
+
+        <!-- Příklad produktu 3 -->
+        <article class="product-card">
+             <span class="favorite-icon">☆</span>
+             <div class="premium-badge">Premium Collection</div>
+             <div class="product-image-placeholder">(Obrázek produktu 3)</div>
+             <h3>Prostorná shopper bag</h3>
+             <p class="price">3 150 Kč</p>
+        </article>
+
+        <!-- Příklad produktu 4 -->
+        <article class="product-card">
+             <span class="favorite-icon">☆</span>
+             <div class="premium-badge">Premium Collection</div>
+             <div class="product-image-placeholder">(Obrázek produktu 4)</div>
+             <h3>Psaníčko na večer</h3>
+             <p class="price">1 299 Kč</p>
+        </article>
+
+        <!-- Přidej další product-card elementy podle potřeby -->
+
+    </main>
+
+    <!-- Patičku (footer) můžeš přidat sem, pokud ji potřebuješ -->
+    <!-- Musíš odkomentovat tuto část, abys ji viděl -->
+    <!--
+    <footer>
+        <div class="container">
+            <p>© 2023 Tvůj E-shop</p>
+        </div>
+    </footer>
+    -->
+
+</body>
+</html>
